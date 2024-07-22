@@ -32,6 +32,7 @@ export function SingleSigner() {
       title: "Success",
       description: JSON.stringify({ onSignMessageAndVerify: response }),
     });
+    alert(JSON.stringify({ onSignMessageAndVerify: response }));
   };
 
   const onSignMessage = async () => {
@@ -44,6 +45,7 @@ export function SingleSigner() {
       title: "Success",
       description: JSON.stringify({ onSignMessage: response }),
     });
+    alert(JSON.stringify(response));
   };
 
   const onSignAndSubmitTransaction = async () => {
