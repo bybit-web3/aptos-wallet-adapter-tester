@@ -25,7 +25,7 @@ export function SingleSigner() {
   const onSignMessageAndVerify = async () => {
     const payload = {
       message: "Hello from Aptos Wallet Adapter",
-      nonce: Math.random().toString(16),
+      nonce: 'bybit',
     };
     const response = await signMessageAndVerify(payload);
     toast({
@@ -38,7 +38,7 @@ export function SingleSigner() {
   const onSignMessage = async () => {
     const payload = {
       message: "Hello from Aptos Wallet Adapter",
-      nonce: Math.random().toString(16),
+      nonce: 'bybit',
     };
     const response = await signMessage(payload);
     toast({
