@@ -7,7 +7,7 @@ export const aptosClient = (network?: NetworkInfo | null) => {
   } else if (network?.name === Network.TESTNET) {
     return TESTNET_CLIENT;
   } else if (network?.name === Network.MAINNET) {
-    throw new Error("Please use devnet or testnet for testing");
+    return MAINNET_CLIENT;
   } else {
     const CUSTOM_CONFIG = new AptosConfig({
       network: Network.CUSTOM,
@@ -26,6 +26,10 @@ export const DEVNET_CLIENT = new Aptos(DEVNET_CONFIG);
 // Testnet client
 export const TESTNET_CONFIG = new AptosConfig({ network: Network.TESTNET });
 export const TESTNET_CLIENT = new Aptos(TESTNET_CONFIG);
+
+// Mainnet client
+export const MAINNET_CONFIG = new AptosConfig({ network: Network.MAINNET });
+export const MAINNET_CLIENT = new Aptos(MAINNET_CONFIG);
 
 export const isSendableNetwork = (
   connected: boolean,
